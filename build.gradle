@@ -1,18 +1,21 @@
 buildscript {
 	ext {
 		springBootVersion = '1.5.6.RELEASE'
+		flyWayVersion = '4.0.3'
 	}
 	repositories {
 		mavenCentral()
 	}
 	dependencies {
 		classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+		classpath("org.flywaydb:flyway-gradle-plugin:${flyWayVersion}")
 	}
 }
 
 apply plugin: 'java'
 apply plugin: 'eclipse'
 apply plugin: 'org.springframework.boot'
+apply plugin: 'org.flywaydb.flyway'
 
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = 1.8
@@ -24,4 +27,14 @@ repositories {
 
 dependencies {
 	compile("org.springframework.boot:spring-boot-starter-web:1.5.6.RELEASE")
+	compile ("org.flywaydb:flyway-core:5.0.6")
+	compile group: 'mysql', name: 'mysql-connector-java', version: '5.1.39'
+	compile group: 'com.alibaba', name: 'druid', version: '1.1.6'
+	compile 'org.projectlombok:lombok:1.16.18'
+//    compile group: 'org.slf4j', name: 'slf4j-api', version: '1.7.25'
+//	compile group: 'ch.qos.logback', name: 'logback-core', version: '1.2.3'
+	testCompile group: 'ch.qos.logback', name: 'logback-classic', version: '1.2.3'
+
+
+
 }
