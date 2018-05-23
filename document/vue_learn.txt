@@ -1,0 +1,8 @@
+vue.js 入门与提高  http://xc.hubwiz.com/course/vue.js
+
+vuex 2 入门与提高 http://xc.hubwiz.com/course/vuex
+
+vue-router 入门与提高http://xc.hubwiz.com/course/vue-router
+
+vue.js 工程化实践 http://xc.hubwiz.com/course/vuegch
+
